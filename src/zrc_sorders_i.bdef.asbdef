@@ -1,0 +1,46 @@
+managed implementation in class zbp_rc_sorders_i unique;
+strict ( 2 );
+
+define behavior for ZRC_SORDERS_I alias Cubing
+persistent table zrc_sorders
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Vbeln, Posnr;
+
+  action ReleaseOrder result[1] $self;
+  action RemoveOrder result[1] $self;
+
+  mapping for zrc_sorders
+  {
+
+  Vbeln = vbeln;
+  Posnr = posnr;
+  Matnr = matnr;
+  Kwmeng = kwmeng;
+  Vrkme = vrkme;
+  Netpr = netpr;
+  Netwr = netwr;
+  Waerk = waerk;
+  Kunnr = kunnr;
+  Kunag = kunag;
+  Erdat = erdat;
+  Auart = auart;
+  Vkorg = vkorg;
+  Vtweg = vtweg;
+  Spart = spart;
+  Vdatu = vdatu;
+  Werks = werks;
+  Lgort = lgort;
+  Augru = augru;
+  Bstnk = bstnk;
+  Openqty = openqty;
+  Roundqty = roundqty;
+  Itemfillrate = itemfillrate;
+  Lfimg = lfimg;
+  }
+}

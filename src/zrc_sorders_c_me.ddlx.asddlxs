@@ -1,0 +1,63 @@
+@Metadata.layer: #CORE
+annotate entity ZRC_SORDERS_C
+    with 
+{
+    @UI: {lineItem: [{ position: 10, importance: #HIGH }, 
+         { type: #FOR_ACTION, dataAction: 'ReleaseOrder', label: 'Release' },
+         { type: #FOR_ACTION, dataAction: 'RemoveOrder', label: 'Remove' }]}
+    @UI.selectionField: [{ position: 30  }]
+    Vbeln;
+    @UI: {lineItem: [{ position: 20, importance: #HIGH }]}
+    Posnr;
+    @UI: {lineItem: [{ position: 30, importance: #HIGH }]}
+    Matnr;
+    @UI: {lineItem: [{ position: 40, importance: #HIGH }]}
+    Kwmeng;
+    //@UI: {lineItem: [{ position: 50, importance: #HIGH }]}
+    //Vrkme;
+    @UI: {lineItem: [{ position: 60, importance: #HIGH, label: 'Unit Price' }]}
+    Netpr;
+    @UI: {lineItem: [{ position: 70, importance: #HIGH, label: 'Total Price' }]}
+    Netwr;
+    //@UI: {lineItem: [{ position: 80, importance: #HIGH }]}
+    //Waerk;
+    @UI: {lineItem: [{ position: 90, importance: #HIGH }]}
+    @UI.selectionField: [{ position: 10  }]
+    Kunnr;
+    @UI: {lineItem: [{ position: 100, importance: #HIGH }]}
+    Kunag;
+    @UI: {lineItem: [{ position: 110, importance: #HIGH }]}
+    Erdat;
+    @UI: {lineItem: [{ position: 120, importance: #HIGH }]}
+    @UI.selectionField: [{ position: 40  }]
+    Auart;
+    @UI: {lineItem: [{ position: 130, importance: #HIGH }]}
+    @UI.selectionField: [{ position: 50  }]
+    Vkorg;
+    @UI: {lineItem: [{ position: 140, importance: #HIGH }]}
+    @UI.selectionField: [{ position: 60  }]
+    Vtweg;
+    @UI: {lineItem: [{ position: 150, importance: #HIGH }]}
+    @UI.selectionField: [{ position: 70  }]
+    Spart;
+    @UI: {lineItem: [{ position: 160, importance: #HIGH }]}
+    @UI.selectionField: [{ position: 20  }]
+    Vdatu;
+    @UI: {lineItem: [{ position: 170, importance: #HIGH }]}
+    Werks;
+//    @UI: {lineItem: [{ position: 180, importance: #HIGH }]}
+//    Lgort;
+//    @UI: {lineItem: [{ position: 190, importance: #HIGH }]}
+//    Augru;
+    @UI: {lineItem: [{ position: 200, importance: #HIGH }]}
+    Bstnk;
+//    @UI: {lineItem: [{ position: 210, importance: #HIGH }]}
+//    Openqty;
+//    @UI: {lineItem: [{ position: 220, importance: #HIGH }]}
+//    Roundqty;
+//    @UI: {lineItem: [{ position: 230, importance: #HIGH }]}
+//    Itemfillrate;
+//    @UI: {lineItem: [{ position: 240, importance: #HIGH }]}
+//    Lfimg;
+    
+}

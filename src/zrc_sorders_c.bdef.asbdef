@@ -1,0 +1,17 @@
+managed implementation in class zbp_rc_sorders_c unique;
+strict ( 2 );
+
+define behavior for ZRC_SORDERS_C alias Cubing
+persistent table zrc_sorders
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Vbeln, Posnr;
+
+  action ReleaseOrder;
+  action RemoveOrder;
+}
